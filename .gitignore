@@ -8,3 +8,6 @@ brand_assets/toplanan/
 .vercel/
 .DS_Store
 Thumbs.db
+
+.vercel
+.env*

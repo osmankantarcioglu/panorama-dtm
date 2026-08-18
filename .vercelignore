@@ -1,0 +1,9 @@
+node_modules
+temporary screenshots
+__pycache__
+brand_assets
+grainger-scraper
+*.py
+*.docx
+*.mjs
+package-lock.json
