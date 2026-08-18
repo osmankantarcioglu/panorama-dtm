@@ -1,0 +1,79 @@
+{
+  "start_url": "C:\\Users\\OSMANK~1\\AppData\\Local\\Temp\\claude\\C--Projects-Panorama\\1869ad0e-78d7-4b8a-a3d3-50a0527ce7d1\\scratchpad\\saved",
+  "generated_at": "2026-08-17T13:31:57+00:00",
+  "pages_visited": 1,
+  "categories": [
+    {
+      "category_path": "abrasives/sanding-abrasives",
+      "category_name": "Sanding Abrasives",
+      "category_url": "https://www.grainger.com/category/abrasives/sanding-abrasives",
+      "parent_path": "abrasives",
+      "parent_url": "https://www.grainger.com/category/abrasives",
+      "depth": 1,
+      "image_count": 3,
+      "subcategory_count": 3
+    }
+  ],
+  "images": [
+    {
+      "file": "images/abrasives/sanding-abrasives/sanding-discs--b19aee88.png",
+      "image_url": "https://www.grainger.com/category/abrasives/sanding-abrasives_files/disc-a.png",
+      "original_src": "sanding-abrasives_files/disc-a.png",
+      "category_name": "Sanding Abrasives",
+      "category_path": "abrasives/sanding-abrasives",
+      "category_url": "https://www.grainger.com/category/abrasives/sanding-abrasives",
+      "parent_path": "abrasives",
+      "parent_url": "https://www.grainger.com/category/abrasives",
+      "depth": 1,
+      "alt_text": "Sanding Discs",
+      "item_label": "Sanding Discs",
+      "item_link": "/category/abrasives/sanding-abrasives/sanding-discs",
+      "width": 150,
+      "height": 150,
+      "bytes": 10928,
+      "sha1": "b19aee888825ebcdc6e90bd1500e37c0f5119f26",
+      "source": "saved-page",
+      "downloaded_at": "2026-08-17T13:31:57+00:00"
+    },
+    {
+      "file": "images/abrasives/sanding-abrasives/sanding-belts--7bb5592e.png",
+      "image_url": "https://www.grainger.com/category/abrasives/sanding-abrasives_files/belt-b.png",
+      "original_src": "sanding-abrasives_files/belt-b.png",
+      "category_name": "Sanding Abrasives",
+      "category_path": "abrasives/sanding-abrasives",
+      "category_url": "https://www.grainger.com/category/abrasives/sanding-abrasives",
+      "parent_path": "abrasives",
+      "parent_url": "https://www.grainger.com/category/abrasives",
+      "depth": 1,
+      "alt_text": "Sanding Belts",
+      "item_label": "Sanding Belts",
+      "item_link": "/category/abrasives/sanding-abrasives/sanding-belts",
+      "width": 150,
+      "height": 150,
+      "bytes": 10928,
+      "sha1": "7bb5592ec418655f42bea8b9bf9ebe252c7c4932",
+      "source": "saved-page",
+      "downloaded_at": "2026-08-17T13:31:57+00:00"
+    },
+    {
+      "file": "images/abrasives/sanding-abrasives/sanding-sheets--18abfb4b.png",
+      "image_url": "https://www.grainger.com/category/abrasives/sanding-abrasives_files/sheet-c.png",
+      "original_src": "sanding-abrasives_files/sheet-c.png",
+      "category_name": "Sanding Abrasives",
+      "category_path": "abrasives/sanding-abrasives",
+      "category_url": "https://www.grainger.com/category/abrasives/sanding-abrasives",
+      "parent_path": "abrasives",
+      "parent_url": "https://www.grainger.com/category/abrasives",
+      "depth": 1,
+      "alt_text": "Sanding Sheets",
+      "item_label": "Sanding Sheets",
+      "item_link": "/category/abrasives/sanding-abrasives/sanding-sheets",
+      "width": 150,
+      "height": 150,
+      "bytes": 10928,
+      "sha1": "18abfb4b13d24289e00ea4536e75da0d0c7e1f0c",
+      "source": "saved-page",
+      "downloaded_at": "2026-08-17T13:31:57+00:00"
+    }
+  ]
+}
