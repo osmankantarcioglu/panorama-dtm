@@ -217,16 +217,29 @@ tailwind.config = {
   /* Sayaç bir ölçüm aleti gibi yüklenir: altındaki ray dolar, rakam yerine oturunca
      ray söner ve sayı tek bir yay hareketiyle kilitlenir. */
   /* ===== mobil menü ===== */
-  .menu-btn{display:flex;flex-direction:column;justify-content:center;gap:5px;
-    width:42px;height:42px;padding:0 9px;margin-left:-2px;border:1px solid #2F3427;background:#13160F;
-    transition:border-color .3s ease,transform .3s cubic-bezier(.34,1.5,.64,1)}
-  .menu-btn:hover{border-color:#93A24F}
-  .menu-btn:active{transform:scale(.94)}
-  .menu-cizgi{display:block;height:1.5px;background:#D3DAB4;
-    transition:transform .34s cubic-bezier(.22,.85,.3,1),opacity .2s ease}
-  .menu-btn[aria-expanded="true"] .menu-cizgi:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+  /* İkon tek başına "kare içinde çizgiler" gibi okunuyordu; yazılı etiket eklendi.
+     Yer açmak için dil anahtarı mobilde menünün içine alındı. */
+  .menu-btn{display:inline-flex;align-items:center;gap:.55rem;height:42px;padding:0 .85rem;
+    border:1px solid #93A24F;background:#13160F;
+    transition:background-color .3s ease,transform .3s cubic-bezier(.34,1.5,.64,1)}
+  .menu-btn:hover{background:#1B1E15}
+  .menu-btn:active{transform:scale(.96)}
+  .menu-ikon{display:flex;flex-direction:column;justify-content:space-between;
+    width:18px;height:14px;flex:none}
+  .menu-cizgi{display:block;width:100%;height:2px;background:#93A24F;
+    transition:transform .34s cubic-bezier(.22,.85,.3,1),opacity .2s ease,background-color .3s ease}
+  .menu-yazi{font-family:'Martian Mono',monospace;font-size:.6875rem;font-weight:700;
+    letter-spacing:.14em;text-transform:uppercase;color:#E9ECE1;line-height:1;white-space:nowrap}
+  .menu-yazi-kapat{display:none}
+  /* açıkken buton marka yeşiliyle doluyor: durum tek bakışta belli */
+  .menu-btn[aria-expanded="true"]{background:#93A24F}
+  .menu-btn[aria-expanded="true"] .menu-cizgi{background:#0A0C09}
+  .menu-btn[aria-expanded="true"] .menu-yazi{color:#0A0C09}
+  .menu-btn[aria-expanded="true"] .menu-yazi-ac{display:none}
+  .menu-btn[aria-expanded="true"] .menu-yazi-kapat{display:inline}
+  .menu-btn[aria-expanded="true"] .menu-cizgi:nth-child(1){transform:translateY(6px) rotate(45deg)}
   .menu-btn[aria-expanded="true"] .menu-cizgi:nth-child(2){opacity:0}
-  .menu-btn[aria-expanded="true"] .menu-cizgi:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+  .menu-btn[aria-expanded="true"] .menu-cizgi:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 
   .mobil-menu{border-top:1px solid #2F3427;background:#0D100A;padding:.5rem 1.25rem 1.25rem}
   .mobil-menu[hidden]{display:none}
@@ -236,7 +249,7 @@ tailwind.config = {
     transition:transform .28s cubic-bezier(.22,.85,.3,1),opacity .28s ease}
   .mm-bag:active{transform:translateX(4px)}
   .mm-vurgu{color:#93A24F}
-  .mm-iletisim{display:flex;flex-wrap:wrap;gap:.35rem 1.5rem;padding-top:1.15rem}
+  .mm-iletisim{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem;padding-top:1.15rem}
   .mm-alt{font-family:'Martian Mono',monospace;font-size:.6875rem;letter-spacing:.12em;color:#8B9182}
   /* açılışta sırayla düşen bağlantılar */
   .mobil-menu.acik .mm-bag{animation:mmDus .38s cubic-bezier(.22,.85,.3,1) both}
@@ -295,15 +308,19 @@ tailwind.config = {
       <a href="#neden" class="tag text-mute hover:text-olive" data-i18n="nav.why">Neden Biz</a>
     </nav>
     <a href="#iletisim" class="btn-p ml-auto hidden px-5 py-2.5 tag font-bold sm:inline-block lg:ml-0" data-i18n="nav.quote">Teklif İste</a>
-    <div class="langsw ml-auto sm:ml-0" role="group" aria-label="Dil / Language">
+    <div class="langsw ml-auto hidden sm:ml-0 lg:inline-flex" role="group" aria-label="Dil / Language">
       <button type="button" class="lang-btn tag" data-lang="tr" aria-pressed="true">TR</button>
       <button type="button" class="lang-btn tag" data-lang="en" aria-pressed="false">EN</button>
     </div>
-    <button type="button" id="menu-ac" class="menu-btn lg:hidden" aria-expanded="false"
-            aria-controls="mobil-menu" data-i18n-aria="nav.menu" aria-label="Menü">
-      <span class="menu-cizgi" aria-hidden="true"></span>
-      <span class="menu-cizgi" aria-hidden="true"></span>
-      <span class="menu-cizgi" aria-hidden="true"></span>
+    <button type="button" id="menu-ac" class="menu-btn ml-auto lg:hidden" aria-expanded="false"
+            aria-controls="mobil-menu">
+      <span class="menu-ikon" aria-hidden="true">
+        <span class="menu-cizgi"></span>
+        <span class="menu-cizgi"></span>
+        <span class="menu-cizgi"></span>
+      </span>
+      <span class="menu-yazi menu-yazi-ac" data-i18n="nav.menu">Menü</span>
+      <span class="menu-yazi menu-yazi-kapat" data-i18n="nav.close">Kapat</span>
     </button>
   </div>
 
@@ -313,6 +330,10 @@ tailwind.config = {
     <a href="#neden" class="mm-bag" data-i18n="nav.why">Neden Biz</a>
     <a href="#iletisim" class="mm-bag mm-vurgu" data-i18n="nav.quote">Teklif İste</a>
     <div class="mm-iletisim">
+      <div class="langsw" role="group" aria-label="Dil / Language">
+        <button type="button" class="lang-btn tag" data-lang="tr" aria-pressed="true">TR</button>
+        <button type="button" class="lang-btn tag" data-lang="en" aria-pressed="false">EN</button>
+      </div>
       <a href="tel:+903522225828" class="mm-alt">0352 222 58 28</a>
       <a href="mailto:info@panoramasan.com" class="mm-alt asis">info@panoramasan.com</a>
     </div>
@@ -603,6 +624,7 @@ const REDUCED = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const EN = {
   'brand.aria': 'Panorama DTM home',
   'nav.menu': 'Menu',
+  'nav.close': 'Close',
   'nav.products': 'Products',
   'nav.manufacturing': 'Manufacturing',
   'nav.why': 'Why Us',
